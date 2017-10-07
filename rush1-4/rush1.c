@@ -26,7 +26,7 @@ void drawline(int i, int x, int y)
 void rush(int x, int y)
 {
 	if (x <= 0 || y <= 0) {
-		write(1, "Invalid size \n", 14);
+		write(1, "Invalid size\n", 13);
 		x = 0;
 		y = 0;
 	}
