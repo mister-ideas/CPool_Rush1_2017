@@ -5,16 +5,22 @@
 ** Rush01
 */
 
-void drawline(int i, int x, int y)
+void first_column(int i, int x, int y)
 {
 	if ((i == 1 || i == y) && y > 1) {
-		if (i == y)
-			my_putchar('C');
-		else
+		if (i == 1)
 			my_putchar('A');
+		else
+			my_putchar('C');
 	}
 	else
 		my_putchar('B');
+
+}
+
+void drawline(int i, int x, int y)
+{
+	first_column(i, x, y);
 	for (int j = 1; j <= (x - 2); j += 1) {
 		if (i == 1 || i == y)
 			my_putchar('B');
@@ -23,9 +29,9 @@ void drawline(int i, int x, int y)
 	}
 	if ((i == 1 || i == y) && y > 1) {
 		if (i == y)
-			my_putchar('C');
-		else
 			my_putchar('A');
+		else
+			my_putchar('C');
 	}
 	else
 		my_putchar('B');
